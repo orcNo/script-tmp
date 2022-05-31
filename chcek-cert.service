@@ -1,0 +1,12 @@
+[Unit]
+Description=CheckCert
+
+[Service]
+ExecStart=/home/longq/work/sds/script/checkcert.sh
+
+[Timer]
+OnUnitActiveSec=6m
+Unit=check-cert.service
+
+[Install]
+WantedBy=multi-user.target
